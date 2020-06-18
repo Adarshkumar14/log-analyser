@@ -10,7 +10,7 @@ import pandas as pd
 # In[68]:
 
 
-dataset = pd.read_csv('access_log.csv',header=None,delim_whitespace=True)
+dataset = pd.read_csv('/root/access_log.csv',header=None,delim_whitespace=True)
 
 
 # In[69]:
@@ -282,10 +282,8 @@ df[df['cluster name']==1]
 
 
 
-
-
-mal_ip=[]
-mal_ip[:]=df[df['cluster name']==1].iloc[:]['ip']
+ mal_ip=[]
+ mal_ip[:]=df[df['cluster name']==0].iloc[:]['ip']
 
 
 # In[325]:
@@ -305,6 +303,25 @@ for i in mal_ip:
  file1.writelines(L)
  
 file1.close()
+
+
+# In[333]:
+
+
+
+file1=open("malicious_ip.txt","r")
+y=file1.read().splitlines()
+file1.close()
+
+
+# In[339]:
+
+
+y
+
+
+# In[ ]:
+
 
 
 
