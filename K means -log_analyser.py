@@ -285,7 +285,8 @@ df[df['cluster name']==1]
  
 
 mal_ip=[]
-mal_ip[:]=df[df['cluster name']==0].iloc[:]['ip']
+
+mal_ip[:]=df[df['cluster name']==1].iloc[:]['ip']
 
 
 # In[325]:
