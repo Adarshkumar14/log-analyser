@@ -298,7 +298,7 @@ type(mal_ip)
 # In[332]:
 
 
-file1=open("malicious_ip.txt","w")
+file1=open("/root/malicious_ip.txt","w")
 for i in mal_ip:
  #file1.write(str(i))
  L=i+"\n"
@@ -310,16 +310,11 @@ file1.close()
 # In[333]:
 
 
-
-file1=open("malicious_ip.txt","r")
-y=file1.read().splitlines()
-file1.close()
-
-
+print('completed!!')
 # In[339]:
 
 
-y
+
 
 
 # In[ ]:
